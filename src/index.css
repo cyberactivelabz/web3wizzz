@@ -185,7 +185,7 @@
   }
 
   .pill-active {
-    @apply bg-ink text-white;
+    @apply bg-ink text-white dark:bg-shell dark:text-ink;
   }
 }
 
