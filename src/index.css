@@ -2,6 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Billo';
+  src: url('../text animation/fonts/Billo.woff2') format('woff2'),
+    url('../text animation/fonts/Billo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#floating-text-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.floating-word {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  z-index: 0;
+  color: #243447;
+  font-family: 'Billo', cursive;
+  font-size: clamp(48px, 13vw, var(--size));
+  line-height: 0.75;
+  opacity: var(--opacity);
+  filter: blur(var(--blur));
+  white-space: nowrap;
+  transform: translate3d(calc(-50% + var(--cursor-x, 0px)), calc(-50% + var(--cursor-y, 0px)), 0)
+    rotate(var(--rotation));
+  animation: float-word var(--duration) ease-in-out var(--delay) infinite alternate;
+  will-change: transform, opacity;
+}
+
+@keyframes float-word {
+  0% {
+    transform: translate3d(calc(-50% + var(--cursor-x, 0px)), calc(-50% + var(--cursor-y, 0px)), 0)
+      rotate(var(--rotation));
+  }
+  100% {
+    transform: translate3d(
+        calc(-50% + var(--drift-x) + var(--cursor-x, 0px)),
+        calc(-50% + var(--drift-y) + var(--cursor-y, 0px)),
+        0
+      )
+      rotate(calc(var(--rotation) + 2deg));
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -25,6 +76,8 @@
   /* The white "page card" the whole site sits on, as in the reference */
   .sheet {
     @apply mx-auto w-full max-w-[1180px] bg-white;
+    position: relative;
+    z-index: 1;
   }
 
   .gutter {
@@ -69,6 +122,24 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .floating-word {
+    animation: none;
+    opacity: 0.035;
+    transform: translate3d(-50%, -50%, 0) rotate(var(--rotation));
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-word {
+    font-size: clamp(42px, 16vw, 110px);
+    --drift-x: 4vw;
+    --drift-y: 3vh;
+  }
+
+  .floating-word:nth-child(n + 10) {
+    display: none;
   }
 }
 

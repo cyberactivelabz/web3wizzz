@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Footer } from './components/Footer';
+import { FloatingTextBackground } from './components/FloatingTextBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
 
@@ -15,6 +16,7 @@ const fallback = <div className="h-64" role="status" aria-label="Loading section
 export default function App() {
   return (
     <div className="sheet min-h-screen">
+      <FloatingTextBackground />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
