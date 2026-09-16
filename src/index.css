@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-shell text-ink antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  ::selection {
+    @apply bg-ink text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  /* The white "page card" the whole site sits on, as in the reference */
+  .sheet {
+    @apply mx-auto w-full max-w-[1180px] bg-white;
+  }
+
+  .gutter {
+    @apply px-6 sm:px-10 lg:px-16;
+  }
+
+  /* Oversized editorial display type */
+  .display {
+    @apply font-extrabold uppercase leading-[0.86] tracking-display;
+  }
+
+  /* Small meta label — sentence case, letter-spaced, grey */
+  .meta {
+    @apply text-[11px] font-medium tracking-[0.18em] text-muted;
+  }
+
+  /* Circular outline button used for scroll + "open" affordances */
+  .circle-btn {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-full border border-line text-ink transition-colors duration-200 hover:border-ink hover:bg-ink hover:text-white sm:h-14 sm:w-14;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full px-5 py-2 text-[13px] font-medium transition-colors duration-200;
+  }
+
+  .pill-idle {
+    @apply border border-line text-ink hover:border-ink;
+  }
+
+  .pill-active {
+    @apply bg-ink text-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d0d0d;
+}
