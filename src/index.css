@@ -4,8 +4,13 @@
 
 @font-face {
   font-family: 'Billo';
+<<<<<<< HEAD
   src: url('../text animation/fonts/Billo.woff2') format('woff2'),
     url('../text animation/fonts/Billo.woff') format('woff');
+=======
+  src: url('/fonts/Billo.woff2') format('woff2'), url('/fonts/Billo.woff') format('woff'),
+    url('/fonts/Billo.ttf') format('truetype');
+>>>>>>> bc751c0 (text animition 2)
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -17,11 +22,17 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
+<<<<<<< HEAD
   user-select: none;
+=======
+  color: #0d0d0d;
+  contain: layout paint style;
+>>>>>>> bc751c0 (text animition 2)
 }
 
 .floating-word {
   position: absolute;
+<<<<<<< HEAD
   left: var(--x);
   top: var(--y);
   z-index: 0;
@@ -50,6 +61,36 @@
         0
       )
       rotate(calc(var(--rotation) + 2deg));
+=======
+  left: var(--word-left);
+  top: var(--word-top);
+  z-index: var(--word-order);
+  font-family: 'Billo', 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: clamp(28px, 7vw, var(--word-size));
+  line-height: 0.8;
+  white-space: nowrap;
+  opacity: var(--word-opacity);
+  filter: blur(var(--word-blur));
+  transform-origin: center;
+  animation: floating-word-drift var(--word-duration) ease-in-out var(--word-delay) infinite;
+  will-change: transform, opacity;
+}
+
+.floating-word__label {
+  display: block;
+  transform: translate3d(var(--cursor-x, 0px), var(--cursor-y, 0px), 0);
+  will-change: transform;
+}
+
+@keyframes floating-word-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--word-rotation));
+  }
+  50% {
+    transform: translate3d(var(--drift-x), var(--drift-y), 0)
+      rotate(calc(var(--word-rotation) * -0.65));
+>>>>>>> bc751c0 (text animition 2)
   }
 }
 
@@ -75,9 +116,13 @@
 @layer components {
   /* The white "page card" the whole site sits on, as in the reference */
   .sheet {
+<<<<<<< HEAD
     @apply mx-auto w-full max-w-[1180px] bg-white;
     position: relative;
     z-index: 1;
+=======
+    @apply mx-auto w-full max-w-[1180px] bg-white/95;
+>>>>>>> bc751c0 (text animition 2)
   }
 
   .gutter {
@@ -126,19 +171,33 @@
 
   .floating-word {
     animation: none;
+<<<<<<< HEAD
     opacity: 0.035;
     transform: translate3d(-50%, -50%, 0) rotate(var(--rotation));
+=======
+  }
+
+  .floating-word__label {
+    transform: none;
+>>>>>>> bc751c0 (text animition 2)
   }
 }
 
 @media (max-width: 640px) {
   .floating-word {
+<<<<<<< HEAD
     font-size: clamp(42px, 16vw, 110px);
     --drift-x: 4vw;
     --drift-y: 3vh;
   }
 
   .floating-word:nth-child(n + 10) {
+=======
+    font-size: clamp(24px, 10vw, 72px);
+  }
+
+  .floating-word:nth-child(n + 11) {
+>>>>>>> bc751c0 (text animition 2)
     display: none;
   }
 }

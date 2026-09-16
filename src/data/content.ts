@@ -29,7 +29,7 @@ export interface Stat {
 }
 
 export const STATS: Stat[] = [
-  { value: '$5M+', label: 'TVL reviewed' },
+  { value: '$2K+', label: 'TVL reviewed' },
   { value: '40+', label: 'Findings reported' },
   { value: '4+', label: 'Years shipping' },
 ];
