@@ -1,0 +1,1 @@
+import{u as n,j as a,m as r}from"./motion-BKmcomNW.js";function u({children:i,delay:t=0,className:e}){const o=n();return a.jsx(r.div,{className:e,initial:o?{opacity:0}:{opacity:0,y:18},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-72px"},transition:{duration:.6,delay:t,ease:[.22,1,.36,1]},children:i})}export{u as R};
