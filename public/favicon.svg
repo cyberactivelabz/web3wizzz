@@ -1,4 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#0a0e14"/>
-  <text x="16" y="22" font-family="monospace" font-size="17" font-weight="700" fill="#34d399" text-anchor="middle">W3</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <image href="/avatar.png" width="400" height="400" preserveAspectRatio="xMidYMid slice"/>
 </svg>
