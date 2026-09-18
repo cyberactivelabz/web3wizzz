@@ -21,7 +21,11 @@ export function Contact() {
   };
 
   const socials = [
-    { label: 'Email', href: `mailto:${PROFILE.email}`, Icon: MailIcon },
+    {
+      label: 'Email',
+      href: "mailto:eliasworkspace247@gmail.com?cc=web3wizzz@outlook.com&subject=Web3%20Project%20Inquiry&body=Hi%20there%2C%20I'd%20like%20to%20discuss%20a%20project...",
+      Icon: MailIcon,
+    },
     { label: 'GitHub', href: PROFILE.github, Icon: GithubIcon },
     { label: 'X', href: PROFILE.twitter, Icon: XIcon },
     { label: 'LinkedIn', href: PROFILE.linkedin, Icon: LinkedinIcon },
