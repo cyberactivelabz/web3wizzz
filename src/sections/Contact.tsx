@@ -31,7 +31,7 @@ export function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-20 bg-ink text-white"
+      className="scroll-mt-20 bg-[#0d0d0d] text-white"
     >
       <div className="gutter py-16 sm:py-20">
         <Reveal>
@@ -100,7 +100,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-ink transition-colors hover:bg-white/85"
+                className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-[#0d0d0d] transition-colors hover:bg-white/85"
               >
                 Send message
               </button>
