@@ -4,13 +4,8 @@
 
 @font-face {
   font-family: 'Billo';
-<<<<<<< HEAD
-  src: url('../text animation/fonts/Billo.woff2') format('woff2'),
-    url('../text animation/fonts/Billo.woff') format('woff');
-=======
   src: url('/fonts/Billo.woff2') format('woff2'), url('/fonts/Billo.woff') format('woff'),
     url('/fonts/Billo.ttf') format('truetype');
->>>>>>> bc751c0 (text animition 2)
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,50 +37,12 @@
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  user-select: none;
-=======
-  color: #0d0d0d;
-=======
   color: rgb(var(--color-ink));
->>>>>>> ec86d5d (type text)
   contain: layout paint style;
->>>>>>> bc751c0 (text animition 2)
 }
 
 .floating-word {
   position: absolute;
-<<<<<<< HEAD
-  left: var(--x);
-  top: var(--y);
-  z-index: 0;
-  color: #243447;
-  font-family: 'Billo', cursive;
-  font-size: clamp(48px, 13vw, var(--size));
-  line-height: 0.75;
-  opacity: var(--opacity);
-  filter: blur(var(--blur));
-  white-space: nowrap;
-  transform: translate3d(calc(-50% + var(--cursor-x, 0px)), calc(-50% + var(--cursor-y, 0px)), 0)
-    rotate(var(--rotation));
-  animation: float-word var(--duration) ease-in-out var(--delay) infinite alternate;
-  will-change: transform, opacity;
-}
-
-@keyframes float-word {
-  0% {
-    transform: translate3d(calc(-50% + var(--cursor-x, 0px)), calc(-50% + var(--cursor-y, 0px)), 0)
-      rotate(var(--rotation));
-  }
-  100% {
-    transform: translate3d(
-        calc(-50% + var(--drift-x) + var(--cursor-x, 0px)),
-        calc(-50% + var(--drift-y) + var(--cursor-y, 0px)),
-        0
-      )
-      rotate(calc(var(--rotation) + 2deg));
-=======
   left: var(--word-left);
   top: var(--word-top);
   z-index: var(--word-order);
@@ -114,7 +71,6 @@
   50% {
     transform: translate3d(var(--drift-x), var(--drift-y), 0)
       rotate(calc(var(--word-rotation) * -0.65));
->>>>>>> bc751c0 (text animition 2)
   }
 }
 
@@ -142,36 +98,22 @@
 }
 
 @layer components {
-  /* The white "page card" the whole site sits on, as in the reference */
   .sheet {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    @apply mx-auto w-full max-w-[1180px] bg-white;
-    position: relative;
-    z-index: 1;
-=======
-    @apply mx-auto w-full max-w-[1180px] bg-white/95;
->>>>>>> bc751c0 (text animition 2)
-=======
     @apply mx-auto w-full max-w-[1180px] bg-surface/95;
->>>>>>> ec86d5d (type text)
   }
 
   .gutter {
     @apply px-6 sm:px-10 lg:px-16;
   }
 
-  /* Oversized editorial display type */
   .display {
     @apply font-extrabold uppercase leading-[0.86] tracking-display;
   }
 
-  /* Small meta label — sentence case, letter-spaced, grey */
   .meta {
     @apply text-[11px] font-medium tracking-[0.18em] text-muted;
   }
 
-  /* Circular outline button used for scroll + "open" affordances */
   .circle-btn {
     @apply inline-flex h-12 w-12 items-center justify-center rounded-full border border-line text-ink transition-colors duration-200 hover:border-ink hover:bg-ink hover:text-white sm:h-14 sm:w-14;
   }
@@ -193,6 +135,7 @@
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -203,37 +146,19 @@
 
   .floating-word {
     animation: none;
-<<<<<<< HEAD
-    opacity: 0.035;
-    transform: translate3d(-50%, -50%, 0) rotate(var(--rotation));
-=======
   }
 
   .floating-word__label {
     transform: none;
->>>>>>> bc751c0 (text animition 2)
   }
 }
 
 @media (max-width: 640px) {
   .floating-word {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    font-size: clamp(42px, 16vw, 110px);
-    --drift-x: 4vw;
-    --drift-y: 3vh;
-  }
-
-  .floating-word:nth-child(n + 10) {
-=======
-    font-size: clamp(24px, 10vw, 72px);
-=======
     font-size: clamp(16px, 8vw, 48px);
->>>>>>> ec86d5d (type text)
   }
 
   .floating-word:nth-child(n + 11) {
->>>>>>> bc751c0 (text animition 2)
     display: none;
   }
 }
@@ -241,13 +166,16 @@
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: rgb(var(--color-shell));
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgb(var(--color-muted));
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(var(--color-ink));
 }

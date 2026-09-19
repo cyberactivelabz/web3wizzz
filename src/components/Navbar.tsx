@@ -8,6 +8,7 @@ import {
   MailIcon,
   MenuIcon,
   MoonIcon,
+  FileTextIcon,
   SunIcon,
   XIcon,
 } from './Icons';
@@ -78,6 +79,14 @@ export function Navbar() {
             className="hidden h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink sm:flex"
           >
             <GithubIcon className="h-4 w-4" />
+          </a>
+          <a
+            href={PROFILE.resume}
+            download
+            aria-label="Download resume"
+            className="hidden h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink sm:flex"
+          >
+            <FileTextIcon className="h-4 w-4" />
           </a>
           <a
             href={PROFILE.twitter}

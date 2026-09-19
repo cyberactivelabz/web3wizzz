@@ -43,11 +43,11 @@ export function Contact() {
             {PROFILE.location}
           </p>
           <h2 id="contact-heading" className="display mt-4 text-[clamp(3rem,12vw,8.5rem)]">
-            Let&rsquo;s talk
+            Have a project in mind?
           </h2>
           <p className="mt-5 max-w-[46ch] text-sm leading-relaxed text-white/60">
-            Need an audit before launch, a protocol built, or an integration finished? Send the scope
-            and a timeline and I&rsquo;ll come back with what it takes.
+            Whether you need a smart contract audit, a DeFi protocol, or the tooling around it, tell
+            me what you&rsquo;re working on and I&rsquo;ll get back to you.
           </p>
         </Reveal>
 
@@ -89,7 +89,7 @@ export function Contact() {
 
               <div>
                 <label htmlFor="contact-message" className={`${labelCls} mb-1 block`}>
-                  Message
+                    Project details
                 </label>
                 <textarea
                   id="contact-message"
@@ -97,7 +97,7 @@ export function Contact() {
                   rows={5}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Scope, timeline, contract addresses"
+                  placeholder="Tell me about your project, scope, and timeline..."
                   className={`${fieldCls} resize-y`}
                 />
               </div>
@@ -106,7 +106,7 @@ export function Contact() {
                 type="submit"
                 className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-[#0d0d0d] transition-colors hover:bg-white/85"
               >
-                Send message
+                Send enquiry
               </button>
 
               <p className="text-[11px] text-white/40">
