@@ -1,0 +1,25 @@
+OLUBIYI ELIJAH
+Web3wizzz | Smart contract auditor & DeFi engineer
+
+Lagos, Nigeria - remote worldwide
+hello@web3wizzz.dev
+https://github.com/web3wizzz
+
+PROFILE
+Web3 developer and smart contract auditor working across protocol engineering,
+security research, and the off-chain tooling that keeps on-chain systems in sync.
+
+FOCUS
+Contract audits | DeFi protocols | ERC standards | Indexers & relayers | Wallet integration
+
+EXPERIENCE
+Building on-chain since 2021.
+
+SELECTED WORK
+Vault Sentinel - ERC-4626 security review
+Aperture Markets - Isolated lending pools
+ChainPulse - Live chain telemetry
+Reorg-safe Indexer - Event pipeline in Go
+
+SKILLS
+Solidity | Foundry | TypeScript | React | Go | PostgreSQL | Redis | Echidna

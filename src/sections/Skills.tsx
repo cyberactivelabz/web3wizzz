@@ -41,13 +41,15 @@ export function Skills() {
                     aria-expanded={open}
                     aria-controls={panelId}
                     className={`flex w-full items-center gap-4 rounded-full py-4 pl-2 pr-2 text-left transition-colors duration-200 ${
-                      open ? 'bg-ink text-white' : 'hover:bg-panel'
+                      open ? 'bg-ink text-white dark:bg-shell dark:text-ink' : 'hover:bg-panel'
                     }`}
                   >
                     <span
                       aria-hidden="true"
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-xs font-semibold ${
-                        open ? 'border-white/40 text-white' : 'border-line text-muted'
+                        open
+                          ? 'border-white/40 text-white dark:border-ink/40 dark:text-ink'
+                          : 'border-line text-muted'
                       }`}
                     >
                       {i + 1}
@@ -60,7 +62,9 @@ export function Skills() {
                     <span
                       aria-hidden="true"
                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border ${
-                        open ? 'border-white/40 text-white' : 'border-line text-ink'
+                        open
+                          ? 'border-white/40 text-white dark:border-ink/40 dark:text-ink'
+                          : 'border-line text-ink'
                       }`}
                     >
                       {open ? <MinusIcon className="h-4 w-4" /> : <PlusIcon className="h-4 w-4" />}

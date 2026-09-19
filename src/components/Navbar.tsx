@@ -8,6 +8,7 @@ import {
   MailIcon,
   MenuIcon,
   MoonIcon,
+  FileTextIcon,
   SunIcon,
   XIcon,
 } from './Icons';
@@ -80,6 +81,14 @@ export function Navbar() {
             <GithubIcon className="h-4 w-4" />
           </a>
           <a
+            href={PROFILE.resume}
+            download
+            aria-label="Download resume"
+            className="hidden h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink sm:flex"
+          >
+            <FileTextIcon className="h-4 w-4" />
+          </a>
+          <a
             href={PROFILE.twitter}
             target="_blank"
             rel="noreferrer"
@@ -98,7 +107,7 @@ export function Navbar() {
             <LinkedinIcon className="h-4 w-4" />
           </a>
           <a
-            href={`mailto:${PROFILE.email}`}
+            href="mailto:eliasworkspace247@gmail.com?cc=web3wizzz@outlook.com&subject=Web3%20Project%20Inquiry&body=Hi%20there%2C%20I'd%20like%20to%20discuss%20a%20project..."
             aria-label="Email Web3wizzz"
             className="hidden h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink sm:flex"
           >
