@@ -16,6 +16,26 @@
   font-display: swap;
 }
 
+:root {
+  color-scheme: light;
+  --color-ink: 13 13 13;
+  --color-muted: 140 140 140;
+  --color-line: 229 229 229;
+  --color-shell: 242 242 242;
+  --color-panel: 247 247 247;
+  --color-surface: 255 255 255;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --color-ink: 244 244 242;
+  --color-muted: 166 166 160;
+  --color-line: 55 55 53;
+  --color-shell: 18 18 17;
+  --color-panel: 29 29 27;
+  --color-surface: 24 24 23;
+}
+
 #floating-text-background {
   position: fixed;
   inset: 0;
@@ -23,9 +43,13 @@
   overflow: hidden;
   pointer-events: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
   user-select: none;
 =======
   color: #0d0d0d;
+=======
+  color: rgb(var(--color-ink));
+>>>>>>> ec86d5d (type text)
   contain: layout paint style;
 >>>>>>> bc751c0 (text animition 2)
 }
@@ -66,7 +90,7 @@
   top: var(--word-top);
   z-index: var(--word-order);
   font-family: 'Billo', 'Brush Script MT', 'Segoe Script', cursive;
-  font-size: clamp(28px, 7vw, var(--word-size));
+  font-size: clamp(18px, 4vw, var(--word-size));
   line-height: 0.8;
   white-space: nowrap;
   opacity: var(--word-opacity);
@@ -111,11 +135,16 @@
   :focus-visible {
     @apply outline-none ring-2 ring-ink ring-offset-2 ring-offset-white;
   }
+
+  :root.dark :focus-visible {
+    --tw-ring-offset-color: rgb(var(--color-surface));
+  }
 }
 
 @layer components {
   /* The white "page card" the whole site sits on, as in the reference */
   .sheet {
+<<<<<<< HEAD
 <<<<<<< HEAD
     @apply mx-auto w-full max-w-[1180px] bg-white;
     position: relative;
@@ -123,6 +152,9 @@
 =======
     @apply mx-auto w-full max-w-[1180px] bg-white/95;
 >>>>>>> bc751c0 (text animition 2)
+=======
+    @apply mx-auto w-full max-w-[1180px] bg-surface/95;
+>>>>>>> ec86d5d (type text)
   }
 
   .gutter {
@@ -186,6 +218,7 @@
 @media (max-width: 640px) {
   .floating-word {
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: clamp(42px, 16vw, 110px);
     --drift-x: 4vw;
     --drift-y: 3vh;
@@ -194,6 +227,9 @@
   .floating-word:nth-child(n + 10) {
 =======
     font-size: clamp(24px, 10vw, 72px);
+=======
+    font-size: clamp(16px, 8vw, 48px);
+>>>>>>> ec86d5d (type text)
   }
 
   .floating-word:nth-child(n + 11) {
@@ -206,12 +242,12 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f2f2f2;
+  background: rgb(var(--color-shell));
 }
 ::-webkit-scrollbar-thumb {
-  background: #cfcfcf;
+  background: rgb(var(--color-muted));
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0d0d0d;
+  background: rgb(var(--color-ink));
 }

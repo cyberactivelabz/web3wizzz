@@ -9,6 +9,13 @@
       content="Web3wizzz (Olubiyi Elijah) — Web3 developer, smart contract auditor and DeFi engineer building secure on-chain systems."
     />
     <meta name="theme-color" content="#ffffff" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem('web3wizzz-theme');
+        const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +23,10 @@
       rel="stylesheet"
     />
     <title>Web3wizzz — Smart Contract Auditor & DeFi Engineer</title>
-    <script type="module" crossorigin src="/assets/index-BiaPPxlX.js"></script>
+    <script type="module" crossorigin src="/assets/index-B2JfZwVT.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/motion-BKmcomNW.js">
     <link rel="modulepreload" crossorigin href="/assets/react-vendor-BpjmJ2TA.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-Bm20OCEz.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-f2whwB_H.css">
   </head>
   <body>
     <div id="root"></div>

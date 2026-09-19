@@ -1,7 +1,16 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { PROFILE } from '../data/content';
-import { CloseIcon, GithubIcon, LinkedinIcon, MailIcon, MenuIcon, XIcon } from './Icons';
+import {
+  CloseIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  MenuIcon,
+  MoonIcon,
+  SunIcon,
+  XIcon,
+} from './Icons';
 
 const LINKS = [
   { href: '#about', label: 'About' },
@@ -12,7 +21,15 @@ const LINKS = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'));
   const reduce = useReducedMotion();
+
+  const toggleTheme = () => {
+    const next = !dark;
+    document.documentElement.classList.toggle('dark', next);
+    localStorage.setItem('web3wizzz-theme', next ? 'dark' : 'light');
+    setDark(next);
+  };
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -31,7 +48,7 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-surface/90 backdrop-blur">
       <nav
         className="gutter mx-auto flex h-16 w-full max-w-[1180px] items-center justify-between border-b border-line"
         aria-label="Primary"
@@ -90,6 +107,15 @@ export function Navbar() {
 
           <button
             type="button"
+            onClick={toggleTheme}
+            aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink hover:bg-panel"
+          >
+            {dark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
+          </button>
+
+          <button
+            type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -109,7 +135,7 @@ export function Navbar() {
             animate={reduce ? { opacity: 1 } : { opacity: 1, height: 'auto' }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="overflow-hidden border-b border-line bg-white md:hidden"
+            className="overflow-hidden border-b border-line bg-surface md:hidden"
           >
             <ul className="gutter mx-auto w-full max-w-[1180px] py-4">
               {LINKS.map((link) => (

@@ -15,7 +15,7 @@ function ProjectCard({ project }: { project: Project }) {
     'inline-flex items-center gap-1.5 text-[11px] font-medium text-muted transition-colors hover:text-ink';
 
   return (
-    <article className="group flex h-full flex-col border border-line bg-white transition-colors duration-200 hover:border-ink">
+    <article className="group flex h-full flex-col border border-line bg-surface transition-colors duration-200 hover:border-ink">
       {/* Preview panel: flat grey field with the project name set large */}
       <div className="flex aspect-[4/3] items-end bg-panel p-6">
         <p className="display text-[clamp(1.5rem,3.4vw,2.25rem)] text-ink/15 transition-colors duration-300 group-hover:text-ink/30">

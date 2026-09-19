@@ -30,8 +30,8 @@ export const floatingWords = [
 
 export const floatingTextSettings = {
   wordCount: 18,
-  minOpacity: 0.025,
-  maxOpacity: 0.08,
+  minOpacity: 0.04,
+  maxOpacity: 0.1,
   minDuration: 20,
   maxDuration: 60,
 };
@@ -139,12 +139,12 @@ const randomSign = () => (Math.random() > 0.5 ? 1 : -1);
 
 function createWordStyle(index: number) {
   const depth = Math.random();
-  const fontSize = randomBetween(28, 52) + depth * 92;
-  const drift = 10 + (1 - depth) * 26;
+  const fontSize = randomBetween(18, 30) + depth * 48;
+  const drift = 6 + (1 - depth) * 14;
 
   return {
-    '--word-left': `${randomBetween(-8, 88)}%`,
-    '--word-top': `${randomBetween(-4, 94)}%`,
+    '--word-left': `${randomBetween(3, 82)}%`,
+    '--word-top': `${randomBetween(4, 90)}%`,
     '--word-size': `${fontSize}px`,
     '--word-opacity': `${randomBetween(
       floatingTextSettings.minOpacity,

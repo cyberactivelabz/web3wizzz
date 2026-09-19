@@ -118,3 +118,20 @@ export function CloseIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function SunIcon({ className }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="12" r="3.5" />
+      <path d="M12 2.5v2M12 19.5v2M4.99 4.99l1.41 1.41M17.6 17.6l1.41 1.41M2.5 12h2M19.5 12h2M4.99 19.01l1.41-1.41M17.6 6.4l1.41-1.41" />
+    </svg>
+  );
+}
+
+export function MoonIcon({ className }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M20.5 15.1A8.5 8.5 0 0 1 8.9 3.5 8.5 8.5 0 1 0 20.5 15.1Z" />
+    </svg>
+  );
+}
