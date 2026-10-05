@@ -15,9 +15,9 @@
   color-scheme: light;
   --color-ink: 13 13 13;
   --color-muted: 140 140 140;
-  --color-line: 229 229 229;
-  --color-shell: 242 242 242;
-  --color-panel: 247 247 247;
+  --color-line: 198 198 195;
+  --color-shell: 214 214 211;
+  --color-panel: 239 239 236;
   --color-surface: 255 255 255;
 }
 
@@ -25,9 +25,9 @@
   color-scheme: dark;
   --color-ink: 244 244 242;
   --color-muted: 166 166 160;
-  --color-line: 55 55 53;
-  --color-shell: 18 18 17;
-  --color-panel: 29 29 27;
+  --color-line: 64 64 61;
+  --color-shell: 14 14 13;
+  --color-panel: 27 27 25;
   --color-surface: 24 24 23;
 }
 
