@@ -1,7 +1,7 @@
 export const PROFILE = {
   alias: 'Web3wizzz',
   realName: 'Olubiyi Elijah',
-  role: 'Smart contract auditor & DeFi engineer',
+  role: 'Web3 Developer, DeFi Engineer & Smart Contract Auditor',
   since: 'Building on-chain since 2024',
   intro:
     'I build and break on-chain systems — secure smart contracts, composable DeFi protocols, and the off-chain tooling that keeps them in sync.',
@@ -162,7 +162,7 @@ export interface TimelineEntry {
 
 export const TIMELINE: TimelineEntry[] = [
   {
-    period: '2024 — now',
+    period: '2024 — Now',
     role: 'Independent smart contract auditor',
     org: 'Freelance · contract',
     summary:
