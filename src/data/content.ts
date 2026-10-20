@@ -31,7 +31,7 @@ export interface Stat {
 
 export const STATS: Stat[] = [
   { value: '$2K+', label: 'TVL reviewed' },
-  { value: '10+', label: 'Findings reported' },
+  { value: '5+', label: 'Findings reported' },
   { value: '2+', label: 'Years shipping' },
 ];
 
