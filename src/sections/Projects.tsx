@@ -11,20 +11,31 @@ import { SectionHeading } from '../components/SectionHeading';
 import { PROJECTS, PROJECT_FILTERS, type Project } from '../data/content';
 
 function ProjectCard({ project }: { project: Project }) {
+  const reduce = useReducedMotion();
   const linkCls =
     'inline-flex items-center gap-1.5 text-[11px] font-medium text-muted transition-colors hover:text-ink';
 
   return (
-    <article className="group flex h-full flex-col border border-line bg-surface transition-colors duration-200 hover:border-ink">
+    <motion.article
+      whileHover={reduce ? undefined : { y: -6, rotateX: 1.5, rotateY: -1 }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      style={{ transformPerspective: 900 }}
+      className="group flex h-full flex-col border border-line bg-surface transition-colors duration-200 hover:border-ink"
+    >
       {/* Preview panel: flat grey field with the project name set large */}
-      <div className="flex aspect-[4/3] items-end bg-panel p-6">
+      <div className="project-preview flex aspect-[4/3] items-end bg-panel p-6">
+        <span className="project-preview__grid" aria-hidden="true" />
+        <span className="project-preview__signal" aria-hidden="true" />
         <p className="display text-[clamp(1.5rem,3.4vw,2.25rem)] text-ink/15 transition-colors duration-300 group-hover:text-ink/30">
           {project.title}
         </p>
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <p className="meta">{project.kicker}</p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="meta">{project.kicker}</p>
+          <span className="project-index">/{String(PROJECTS.indexOf(project) + 1).padStart(2, '0')}</span>
+        </div>
         <h3 className="mt-2 text-lg font-semibold tracking-display">{project.title}</h3>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
 
@@ -59,7 +70,7 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }
 

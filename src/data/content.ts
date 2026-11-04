@@ -1,7 +1,9 @@
+import resumeUrl from '../assets/Olubiyi_Elijah_Resume.pdf';
+
 export const PROFILE = {
   alias: 'Web3wizzz',
   realName: 'Olubiyi Elijah',
-  role: 'Smart contract auditor & DeFi engineer',
+  role: 'Web3 Developer, DeFi Engineer & Smart Contract Auditor',
   since: 'Building on-chain since 2024',
   intro:
     'I build and break on-chain systems — secure smart contracts, composable DeFi protocols, and the off-chain tooling that keeps them in sync.',
@@ -10,10 +12,13 @@ export const PROFILE = {
   email: 'eliasworkspace@gmail.com',
   location: 'Lagos, Nigeria 🇳🇬 |Remote worldwide',
   github: 'https://github.com/web3wizzz',
-  resume: '/resume.txt',
-  twitter: 'https://x.com/web3wizzz',
+  resume: resumeUrl,
+  twitter: 'https://x.com/cyberactivelabz',
   linkedin: 'https://www.linkedin.com/in/web3wizzz',
 };
+
+export const DISCOVERY_CALL_HREF =
+  'mailto:eliasworkspace@gmail.com?subject=Discovery%20call%20request&body=Hi%20Olubiyi%2C%0A%0AI%27d%20like%20to%20book%20a%20discovery%20call%20about%20a%20Web3%20project.%0A%0AProject%20or%20protocol%3A%20%0AWhat%20I%27d%20like%20to%20discuss%3A%20%0APreferred%20timing%3A%20';
 
 /** Short capability list shown down the right edge of the hero. */
 export const CAPABILITIES = [
@@ -31,8 +36,8 @@ export interface Stat {
 
 export const STATS: Stat[] = [
   { value: '$2K+', label: 'TVL reviewed' },
-  { value: '40+', label: 'Findings reported' },
-  { value: '4+', label: 'Years shipping' },
+  { value: '5+', label: 'Findings reported' },
+  { value: '2+', label: 'Years shipping' },
 ];
 
 export interface Project {
@@ -49,66 +54,44 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'vault-sentinel',
-    title: 'Vault Sentinel',
-    kicker: 'ERC-4626 security review',
+    id: 'go-evm-lite',
+    title: 'Go EVM Lite',
+    kicker: 'Ethereum Virtual Machine in Go',
     description:
-      'Independent review of a yield vault: reentrancy surface, share-price manipulation and rounding edges. Three critical findings resolved before launch.',
-    category: 'Audits',
-    tags: ['Solidity', 'ERC-4626', 'Foundry'],
-    github: 'https://github.com/web3wizzz',
-    report: 'https://github.com/web3wizzz',
-  },
-  {
-    id: 'lending-market',
-    title: 'Aperture Markets',
-    kicker: 'Isolated lending pools',
-    description:
-      'Isolated-pair lending market with oracle-guarded liquidations, permissioned risk tiers and an upgrade path that keeps storage layout stable.',
-    category: 'Protocols',
-    tags: ['Solidity', 'DeFi', 'Oracles'],
-    github: 'https://github.com/web3wizzz',
-  },
-  {
-    id: 'chain-pulse',
-    title: 'ChainPulse',
-    kicker: 'Live chain telemetry',
-    description:
-      'Block height, base fee and gas oracle in one widget, with automatic failover across public RPC endpoints when a provider degrades.',
+      'A lightweight EVM built from scratch to explore bytecode execution, 256-bit arithmetic, memory, storage, gas and contract state.',
     category: 'Tooling',
-    tags: ['TypeScript', 'ethers.js', 'React'],
-    github: 'https://github.com/web3wizzz',
-    demo: 'https://github.com/web3wizzz',
+    tags: ['Go', 'EVM', 'Ethereum'],
+    github: 'https://github.com/web3wizzz/go-evm-lite',
   },
   {
-    id: 'reorg-indexer',
-    title: 'Reorg-safe Indexer',
-    kicker: 'Event pipeline in Go',
+    id: 'dash-escrow-payment',
+    title: 'DA$H',
+    kicker: 'USDC payments on Arc',
     description:
-      'Log indexer that survives reorgs by keeping a rollback window, replaying canonical blocks and reconciling state without dropping events.',
-    category: 'Tooling',
-    tags: ['Go', 'PostgreSQL', 'Redis'],
-    github: 'https://github.com/web3wizzz',
-  },
-  {
-    id: 'staking-audit',
-    title: 'Helix Staking',
-    kicker: 'Pre-launch audit',
-    description:
-      'Reward-accounting review of a staking system: precision loss on claim, unchecked delegate transfer and a griefing vector on emergency exit.',
-    category: 'Audits',
-    tags: ['Solidity', 'Staking', 'Echidna'],
-    report: 'https://github.com/web3wizzz',
-  },
-  {
-    id: 'amm-router',
-    title: 'Split Router',
-    kicker: 'Multi-hop AMM routing',
-    description:
-      'Gas-aware router that splits an order across pools, prices each hop off-chain and settles in a single call with slippage bounds per leg.',
+      'A non-custodial USDC payment app with wallet handles, payment requests, QR payments, escrow orders and scheduled payouts.',
     category: 'Protocols',
-    tags: ['Solidity', 'AMM', 'Gas'],
-    github: 'https://github.com/web3wizzz',
+    tags: ['Solidity', 'React', 'Arc'],
+    github: 'https://github.com/web3wizzz/Dash_Escrow_Payment',
+  },
+  {
+    id: 'tank',
+    title: 'Tank',
+    kicker: 'Verifiable file storage for Web3',
+    description:
+      'Decentralized file storage with Reed-Solomon redundancy, client-side encryption and on-chain proofs for verifiable retrieval.',
+    category: 'Tooling',
+    tags: ['Go', 'Solidity', 'TypeScript'],
+    github: 'https://github.com/web3wizzz/tank',
+  },
+  {
+    id: 'prova',
+    title: 'PROVA',
+    kicker: 'Verifiable digital documents',
+    description:
+      'A Web3-powered platform for signing, verifying and proving the authenticity of digital documents.',
+    category: 'Protocols',
+    tags: ['Web3', 'Document verification'],
+    github: 'https://github.com/web3wizzz/prova',
   },
 ];
 
@@ -162,7 +145,7 @@ export interface TimelineEntry {
 
 export const TIMELINE: TimelineEntry[] = [
   {
-    period: '2024 — now',
+    period: '2024 — Now',
     role: 'Independent smart contract auditor',
     org: 'Freelance · contract',
     summary:

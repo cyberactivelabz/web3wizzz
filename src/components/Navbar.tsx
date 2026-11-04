@@ -49,9 +49,9 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line/70 bg-surface/70 shadow-sm backdrop-blur-xl backdrop-saturate-150">
       <nav
-        className="gutter mx-auto flex h-16 w-full max-w-[1180px] items-center justify-between border-b border-line"
+        className="gutter mx-auto flex h-16 w-full max-w-[1180px] items-center justify-between"
         aria-label="Primary"
       >
         <a href="#top" className="text-sm font-semibold tracking-display">
@@ -144,7 +144,7 @@ export function Navbar() {
             animate={reduce ? { opacity: 1 } : { opacity: 1, height: 'auto' }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="overflow-hidden border-b border-line bg-surface md:hidden"
+            className="overflow-hidden border-b border-line bg-surface/80 backdrop-blur-xl md:hidden"
           >
             <ul className="gutter mx-auto w-full max-w-[1180px] py-4">
               {LINKS.map((link) => (

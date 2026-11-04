@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { GithubIcon, LinkedinIcon, MailIcon, XIcon } from '../components/Icons';
 import { Reveal } from '../components/Reveal';
-import { PROFILE } from '../data/content';
+import { DISCOVERY_CALL_HREF, PROFILE } from '../data/content';
 
 const fieldCls =
   'w-full border-b border-white/25 bg-transparent py-3 text-sm text-white placeholder:text-white/40 focus:border-white focus:outline-none';
@@ -49,6 +49,18 @@ export function Contact() {
             Whether you need a smart contract audit, a DeFi protocol, or the tooling around it, tell
             me what you&rsquo;re working on and I&rsquo;ll get back to you.
           </p>
+          <a
+            href={DISCOVERY_CALL_HREF}
+            className="magnetic-cta group mt-7 inline-flex items-center gap-3 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold transition-colors hover:border-white hover:bg-white hover:text-[#0d0d0d]"
+          >
+            Book a discovery call
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              ↗
+            </span>
+          </a>
         </Reveal>
 
         <div className="mt-12 grid gap-12 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-16">
