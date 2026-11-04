@@ -11,8 +11,13 @@
     <meta name="theme-color" content="#ffffff" />
     <script>
       (() => {
-        const saved = localStorage.getItem('web3wizzz-theme');
-        const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        let saved = null;
+        try {
+          saved = localStorage.getItem('web3wizzz-theme');
+        } catch {
+          // Storage can be unavailable in private browsing or restricted contexts.
+        }
+        const dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
         document.documentElement.classList.toggle('dark', dark);
       })();
     </script>

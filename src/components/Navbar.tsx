@@ -28,7 +28,11 @@ export function Navbar() {
   const toggleTheme = () => {
     const next = !dark;
     document.documentElement.classList.toggle('dark', next);
-    localStorage.setItem('web3wizzz-theme', next ? 'dark' : 'light');
+    try {
+      localStorage.setItem('web3wizzz-theme', next ? 'dark' : 'light');
+    } catch {
+      // Storage can be unavailable in private browsing or restricted contexts.
+    }
     setDark(next);
   };
 
