@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import avatar from '../assets/avatar.png';
 import { ArrowDownRightIcon } from '../components/Icons';
-import { CAPABILITIES, PROFILE } from '../data/content';
+import { CAPABILITIES, DISCOVERY_CALL_HREF, PROFILE } from '../data/content';
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -21,6 +21,18 @@ export function Hero() {
         <span className="block text-muted">Explore my</span>
         <span className="block">portfolio</span>
       </motion.h1>
+
+      <motion.div
+        {...rise(0.06)}
+        className="hero-signal pointer-events-none absolute right-[8%] top-24 hidden h-40 w-40 sm:block lg:right-[14%] lg:top-28 lg:h-56 lg:w-56"
+        aria-hidden="true"
+      >
+        <span className="hero-signal__ring hero-signal__ring--outer" />
+        <span className="hero-signal__ring hero-signal__ring--inner" />
+        <span className="hero-signal__core" />
+        <span className="hero-signal__orbit hero-signal__orbit--one" />
+        <span className="hero-signal__orbit hero-signal__orbit--two" />
+      </motion.div>
 
       {/* Meta row: who, portrait, what it says */}
       <div className="mt-10 grid gap-8 md:mt-14 md:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)_minmax(0,1fr)] md:items-start md:gap-6">
@@ -56,6 +68,21 @@ export function Hero() {
           <p className="ml-auto max-w-[32ch] text-sm leading-relaxed text-muted">
             {PROFILE.intro}
           </p>
+
+          <a
+            href={DISCOVERY_CALL_HREF}
+            className="magnetic-cta group mt-7 inline-flex items-center gap-3 text-sm font-semibold md:justify-end"
+          >
+            <span className="border-b border-ink pb-1 transition-colors group-hover:border-muted group-hover:text-muted">
+              Book a discovery call
+            </span>
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              ↗
+            </span>
+          </a>
 
           <ul className="mt-10 space-y-3 md:mt-16">
             {CAPABILITIES.map((item) => (
