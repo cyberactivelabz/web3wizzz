@@ -122,7 +122,7 @@ export function Contact() {
               </button>
 
               <p className="text-[11px] text-white/40">
-                Opens your mail client. Nothing is stored on this site.
+                Opens your mail.
               </p>
             </form>
           </Reveal>
