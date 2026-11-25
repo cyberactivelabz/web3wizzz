@@ -3,14 +3,14 @@ import resumeUrl from '../assets/Olubiyi_Elijah_Resume.pdf';
 export const PROFILE = {
   alias: 'Web3wizzz',
   realName: 'Olubiyi Elijah',
-  role: 'Web3 Developer, DeFi Engineer & Smart Contract Auditor',
+  role: 'Web2 & Web3 Developer, DeFi Engineer & Smart Contract Auditor',
   since: 'Building on-chain since 2024',
   intro:
-    'I build and break on-chain systems — secure smart contracts, composable DeFi protocols, and the off-chain tooling that keeps them in sync.',
+    'I build and break on-chain systems — secure smart contracts, composable DeFi protocols, and the off-chain tooling that keeps them in sync. I am also a web developer and software engineer',
   about:
-    'Olubiyi Elijah, known on-chain as Web3wizzz, is a Web3 developer and smart contract auditor working across protocol engineering and security research. Every line of contract code is an economic promise, so it gets treated like one.',
+    'Olubiyi Elijah, known on-chain as Web3wizzz, is a Web2/Web3 developer and smart contract auditor working across protocol engineering and security research. Every line of contract code is an economic promise, so it gets treated like one.',
   email: 'eliasworkspace@gmail.com',
-  location: 'Lagos, Nigeria 🇳🇬 |Remote worldwide',
+  location: 'Lagos, Nigeria | Remote worldwide',
   github: 'https://github.com/web3wizzz',
   resume: resumeUrl,
   twitter: 'https://x.com/ox_spade',
