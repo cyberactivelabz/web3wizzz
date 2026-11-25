@@ -13,7 +13,7 @@ export const PROFILE = {
   location: 'Lagos, Nigeria 🇳🇬 |Remote worldwide',
   github: 'https://github.com/web3wizzz',
   resume: resumeUrl,
-  twitter: 'https://x.com/cyberactivelabz',
+  twitter: 'https://x.com/ox_spade',
   linkedin: 'https://www.linkedin.com/in/web3wizzz',
 };
 
